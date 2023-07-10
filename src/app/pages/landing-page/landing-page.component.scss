@@ -1,0 +1,65 @@
+.login-main-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    rgb(38, 3, 60) 0%,
+    rgba(53, 8, 87, 0.824) 0%,
+    rgb(68, 14, 118) 21%,
+    rgba(96, 2, 98, 0.793) 49%,
+    rgba(90, 5, 91, 0.945) 68%,
+    rgb(122, 5, 120) 100%
+  );
+
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    width: 100%;
+
+    .logo-container {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      .spotify {
+        font-size: xx-large;
+        font-weight: 700;
+        color: #ffffff;
+      }
+    }
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      .text {
+        font-size: 30px;
+        font-weight: 500;
+        color: #ffffff;
+      }
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      .login-spotify {
+        width: 350px;
+        border-radius: 90px;
+        background: #1da84d;
+        color: #ffffff;
+        font-weight: 500;
+        font-size: initial;
+      }
+      .logging-in {
+        color: #ffffff;
+        font-weight: 500;
+        font-size: initial;
+      }
+    }
+  }
+}

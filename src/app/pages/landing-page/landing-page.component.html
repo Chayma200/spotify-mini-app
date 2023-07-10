@@ -1,0 +1,30 @@
+<div class="login-main-container">
+  <div class="login-container">
+    <!-- Logo and Title -->
+    <div class="logo-container">
+      <img
+        src="assets/login-images/spotify-logo.svg"
+        alt=""
+        width="80px"
+        height="80px"
+      />
+      <span class="spotify">Spotify</span>
+    </div>
+    <!-- text -->
+    <div class="text-container">
+      <div class="text">Millions of songs.</div>
+      <div class="text">Free on Spotify.</div>
+    </div>
+    <!-- Buttons -->
+    <div class="button-container">
+      <button
+        mat-flat-button
+        [disabled]="isLoading"
+        class="login-spotify"
+        (click)="loginWithSpotify()"
+      >
+        {{ isLoading ? "LOGGING IN..." : "LOGIN WITH SPOTIFY" }}
+      </button>
+    </div>
+  </div>
+</div>

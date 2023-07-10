@@ -1,0 +1,20 @@
+<div class="dashboard-container">
+  <div class="dashboard-search-container">
+    <div style="padding: 30px">
+      <app-search-bar (searchValue)="onSearchValue($event)"></app-search-bar>
+    </div>
+
+    <div *ngIf="errorMessage" class="empty-state">
+      {{ errorMessage }}
+    </div>
+
+    <div *ngIf="!errorMessage && artists?.length" style="padding: 0px 15px">
+      <h3 class="artist-title">ARTISTS</h3>
+      <div class="artists-container">
+        <div *ngFor="let artist of artists" class="artist">
+          <app-artist-card [artist]="artist"></app-artist-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

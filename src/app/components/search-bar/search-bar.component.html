@@ -1,0 +1,14 @@
+<div class="search-container">
+  <div class="search-placeholder">
+    <mat-icon class="search-icon">search</mat-icon>
+    <input
+      #filter
+      id="search"
+      class="search-bar"
+      type="text"
+      placeholder="What do you want to listen to?"
+      [(ngModel)]="searchStr"
+      (ngModelChange)="emitFilterValue($event)"
+    />
+  </div>
+</div>

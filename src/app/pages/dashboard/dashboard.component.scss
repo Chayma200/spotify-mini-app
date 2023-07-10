@@ -1,0 +1,53 @@
+.dashboard-container {
+  height: 100vh;
+  background-color: #121212;
+  .dashboard-search-container {
+    background-color: #121212;
+
+    .empty-state {
+      display: flex;
+      height: 700px;
+      justify-content: center;
+      align-items: center;
+      font-size: 35px;
+      color: gray;
+    }
+    .artist-title {
+      padding-left: 15px;
+      color: white;
+      margin: 0px 0px 30px 0px !important;
+    }
+    .artists-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      .artist {
+        min-width: 250px;
+        width: 25%;
+      }
+    }
+  }
+}
+
+.spinner {
+  position: absolute;
+  margin: 0;
+  right: 15px;
+}
+
+@media screen and (min-width: 850px) and (max-width: 1080px) {
+  .artist {
+    width: 33.33% !important;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 850px) {
+  .artist {
+    width: 50% !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .artist {
+    width: 100% !important;
+  }
+}

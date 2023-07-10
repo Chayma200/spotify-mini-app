@@ -1,0 +1,14 @@
+<mat-card class="artist-card">
+  <mat-card-content class="artist-card-content">
+    <div *ngIf="artistImage" class="artist-image-container">
+      <img [src]="artistImage.url" alt="" class="artist-image" />
+    </div>
+    <div class="artist-name">
+      {{ artist.name }}
+    </div>
+    <div class="followers-popularity">
+      <div>{{ artist.followers?.total }} Followers</div>
+      <div></div>
+    </div>
+  </mat-card-content>
+</mat-card>

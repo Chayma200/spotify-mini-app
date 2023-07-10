@@ -1,0 +1,32 @@
+.search-container {
+  display: flex;
+  background-color: #242424;
+  border-radius: 500px;
+  color: #242424 !important;
+  height: 48px;
+  text-overflow: ellipsis;
+  width: 100%;
+  min-width: 300px;
+  .search-placeholder {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+    width: 100%;
+    .search-icon {
+      color: #ffffffb3;
+      width: 25px !important;
+      height: 25px !important;
+    }
+    .search-bar {
+      font-size: 16px;
+      background-color: #242424;
+      color: #ffffff;
+      border: 0;
+      width: calc(100% - 50px);
+    }
+    input:focus {
+      outline: none;
+    }
+  }
+}
