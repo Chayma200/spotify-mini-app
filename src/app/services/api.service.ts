@@ -14,7 +14,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) {
     const authStore = getStore('auth');
-    authStore?.subscribe((state) => {
+    authStore?.subscribe((state: any) => {
       console.log('state.user', state.user);
       this.userToken =
         state?.user?.userToken || localStorage.getItem('spotifyUserToken');

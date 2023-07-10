@@ -32,4 +32,6 @@ export class ArtistCardComponent implements OnInit, OnChanges {
       this.artistImage = this.artist.images[0];
     }
   }
+
+  onArtistClick(): void {}
 }
