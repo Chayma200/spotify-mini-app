@@ -1,4 +1,4 @@
-<mat-card class="artist-card" (click)="onArtistClick()">
+<mat-card class="artist-card" (click)="onArtistClick(artist.name || '')">
   <mat-card-content class="artist-card-content">
     <div *ngIf="artistImage" class="artist-image-container">
       <img [src]="artistImage.url" alt="" class="artist-image" />

@@ -1,11 +1,12 @@
+import { ArtistModel } from 'src/app/models/artistModel';
 import {
   Component,
   Input,
   OnInit,
   OnChanges,
-  SimpleChange,
+  Output,
+  EventEmitter,
 } from '@angular/core';
-import { ArtistModel } from 'src/app/models/artistModel';
 
 @Component({
   selector: 'app-artist-card',
@@ -14,6 +15,7 @@ import { ArtistModel } from 'src/app/models/artistModel';
 })
 export class ArtistCardComponent implements OnInit, OnChanges {
   @Input() artist: ArtistModel = new ArtistModel();
+  @Output() artistClicked = new EventEmitter<string>();
   artistImage: { width: number; height: number; url: string } = {
     width: 640,
     height: 640,
@@ -33,5 +35,7 @@ export class ArtistCardComponent implements OnInit, OnChanges {
     }
   }
 
-  onArtistClick(): void {}
+  onArtistClick(artistName: string): void {
+    this.artistClicked.emit(artistName);
+  }
 }

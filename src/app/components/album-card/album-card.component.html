@@ -1,0 +1,15 @@
+<mat-card class="album-card">
+  <mat-card-content class="album-card-content">
+    <div *ngIf="albumImage" class="album-image-container">
+      <img [src]="albumImage.url" alt="" class="album-image" />
+    </div>
+    <div class="album-name">
+      {{ album.name }}
+    </div>
+    <div class="release">Release at {{ album.release_date }}</div>
+    <div class="tracks">
+      {{ album.total_tracks }} &nbsp;
+      {{ album.total_tracks && album.total_tracks > 1 ? "Tracks" : "Track" }}
+    </div>
+  </mat-card-content>
+</mat-card>

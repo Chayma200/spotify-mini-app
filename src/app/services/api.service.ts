@@ -15,7 +15,6 @@ export class ApiService {
   constructor(private http: HttpClient) {
     const authStore = getStore('auth');
     authStore?.subscribe((state: any) => {
-      console.log('state.user', state.user);
       this.userToken =
         state?.user?.userToken || localStorage.getItem('spotifyUserToken');
     });
@@ -23,7 +22,23 @@ export class ApiService {
 
   getAllArtists(searchQuery: string): Observable<any> {
     let url = `https://api.spotify.com/v1/search?q=${searchQuery}&type=artist`;
-    console.log('token', this.userToken);
+    return this.http
+      .get<any>(url, {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.userToken}`,
+        },
+      })
+      .pipe(timeout(30000))
+      .pipe(
+        catchError((error: HttpErrorResponse) => {
+          return throwError(error);
+        })
+      );
+  }
+
+  getArtistAlbums(artistName: string): Observable<any> {
+    let url = `https://api.spotify.com/v1/search?q=${artistName}&type=album`;
     return this.http
       .get<any>(url, {
         headers: {

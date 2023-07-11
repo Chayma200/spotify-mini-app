@@ -47,6 +47,9 @@
     .button-container {
       display: flex;
       justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
       .login-spotify {
         width: 350px;
         border-radius: 90px;
@@ -56,6 +59,15 @@
         font-size: initial;
       }
       .logging-in {
+        color: #ffffff;
+        font-weight: 500;
+        font-size: initial;
+      }
+
+      .register-artist {
+        width: 350px;
+        border-radius: 90px;
+        background: #1481df;
         color: #ffffff;
         font-weight: 500;
         font-size: initial;

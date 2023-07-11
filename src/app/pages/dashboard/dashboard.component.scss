@@ -26,6 +26,31 @@
         width: 25%;
       }
     }
+
+    .album-title {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding-left: 15px;
+      color: white;
+      margin: 0px 0px 30px 0px !important;
+      .back-icon {
+        background: #303030;
+        border-radius: 50%;
+        padding: 3px;
+        cursor: pointer;
+      }
+    }
+
+    .album-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      .album {
+        min-width: 250px;
+        width: 25%;
+      }
+    }
   }
 }
 
@@ -35,19 +60,31 @@
   right: 15px;
 }
 
+.logout-btn {
+  color: white !important;
+  background-color: #950b0b;
+}
+
+.search-bar {
+  width: 96%;
+  min-width: 300px;
+}
 @media screen and (min-width: 850px) and (max-width: 1080px) {
-  .artist {
+  .artist,
+  .album {
     width: 33.33% !important;
   }
 }
 
 @media screen and (min-width: 600px) and (max-width: 850px) {
-  .artist {
+  .artist,
+  .album {
     width: 50% !important;
   }
 }
 @media screen and (max-width: 600px) {
-  .artist {
+  .artist,
+  .album {
     width: 100% !important;
   }
 }

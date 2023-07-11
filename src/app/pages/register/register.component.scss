@@ -1,0 +1,74 @@
+.register-form-container {
+  height: 100%;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  .logo-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .spotify {
+      font-size: xx-large;
+      font-weight: 700;
+      // color: #ffffff;
+    }
+  }
+  .register-card {
+    min-width: 500px;
+    width: 900px;
+    background: #ffffff;
+    margin-bottom: 24px;
+    padding: 0px 24px;
+    .card-title {
+      text-align: center;
+      font-size: 24px;
+      padding: 24px 0px;
+    }
+  }
+}
+
+.form-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.field {
+  width: 49%;
+}
+
+.full-row {
+  width: 100%;
+}
+
+.albums-title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0px 0px 1em 0px !important;
+}
+.songs-title {
+  margin: 0px !important;
+}
+.pointer {
+  cursor: pointer;
+}
+
+.disabled {
+  opacity: 0.6;
+  color: gray;
+  background-color: #05c29f !important;
+  cursor: context-menu !important;
+}
+
+.save-btn {
+  background-color: #05c29f;
+}
+
+mat-card-actions {
+  padding: 0px !important;
+  gap: 10px;
+}

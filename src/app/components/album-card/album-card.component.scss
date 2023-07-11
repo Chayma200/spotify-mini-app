@@ -1,0 +1,43 @@
+.album-card {
+  background-color: #181818;
+  margin: 15px;
+  cursor: pointer;
+  .album-card-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    .album-image-container {
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      width: 165px;
+      height: 165px;
+      cursor: pointer;
+      position: relative;
+      .album-image {
+        width: 165px;
+        height: 165px;
+        border-radius: 5px;
+        object-position: center !important;
+        object-fit: cover !important;
+      }
+    }
+    .album-image-container:hover {
+      transform: scale(1.1);
+    }
+    .album-name {
+      font-size: 1rem;
+      color: #ffffff;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 250px;
+    }
+    .tracks,
+    .release {
+      color: #ffffff;
+    }
+  }
+}

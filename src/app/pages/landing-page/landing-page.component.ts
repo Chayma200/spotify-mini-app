@@ -1,8 +1,5 @@
-import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ApiService } from 'src/app/services/api.service';
-import { createStore, select, withProps } from '@ngneat/elf';
-import { UserModel } from 'src/app/models/userModel';
+import { Component, OnInit } from '@angular/core';
 import { authStore } from 'src/app/store';
 
 @Component({
@@ -15,11 +12,7 @@ export class LandingPageComponent implements OnInit {
   redirect_uri = 'http://localhost:4200';
   scope = 'user-read-private user-read-email';
   isLoading = false;
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute,
-    private apiService: ApiService
-  ) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.route.fragment.subscribe((fragment) => {
@@ -29,7 +22,7 @@ export class LandingPageComponent implements OnInit {
         const token = temp.split('=')[1];
         if (token) {
           this.isLoading = false;
-          authStore.update((state) => ({
+          authStore.update((state: any) => ({
             ...state,
             user: { userToken: token },
           }));
@@ -45,5 +38,9 @@ export class LandingPageComponent implements OnInit {
   loginWithSpotify(): void {
     this.isLoading = true;
     window.location.href = `https://accounts.spotify.com/authorize?response_type=token&client_id=${this.client_id}&scope=${this.scope}&redirect_uri=${this.redirect_uri}`;
+  }
+
+  registerArtist(): void {
+    this.router.navigate(['register']);
   }
 }
